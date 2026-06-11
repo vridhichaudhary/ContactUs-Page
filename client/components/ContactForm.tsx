@@ -27,8 +27,7 @@ export default function ContactForm() {
     setErrorMessage('');
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001';
-      await axios.post(`${apiUrl}/api/contact`, data);
+      await axios.post('http://localhost:5001/api/contact', data);
       setSubmitStatus('success');
       reset();
     } catch (error: any) {
@@ -81,11 +80,10 @@ export default function ContactForm() {
               type="text"
               id="fullName"
               {...register('fullName')}
-              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent transition-colors ${
-                errors.fullName
+              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent transition-colors ${errors.fullName
                   ? 'ring-red-300 dark:ring-red-700 focus:ring-red-500'
                   : 'ring-zinc-300 dark:ring-zinc-700 focus:ring-indigo-600 dark:focus:ring-indigo-500 hover:ring-zinc-400 dark:hover:ring-zinc-600'
-              }`}
+                }`}
               placeholder="Jane Doe"
             />
             {errors.fullName && (
@@ -105,11 +103,10 @@ export default function ContactForm() {
               type="email"
               id="email"
               {...register('email')}
-              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent transition-colors ${
-                errors.email
+              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent transition-colors ${errors.email
                   ? 'ring-red-300 dark:ring-red-700 focus:ring-red-500'
                   : 'ring-zinc-300 dark:ring-zinc-700 focus:ring-indigo-600 dark:focus:ring-indigo-500 hover:ring-zinc-400 dark:hover:ring-zinc-600'
-              }`}
+                }`}
               placeholder="jane@example.com"
             />
             {errors.email && (
@@ -129,11 +126,10 @@ export default function ContactForm() {
               type="tel"
               id="phoneNumber"
               {...register('phoneNumber')}
-              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent transition-colors ${
-                errors.phoneNumber
+              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent transition-colors ${errors.phoneNumber
                   ? 'ring-red-300 dark:ring-red-700 focus:ring-red-500'
                   : 'ring-zinc-300 dark:ring-zinc-700 focus:ring-indigo-600 dark:focus:ring-indigo-500 hover:ring-zinc-400 dark:hover:ring-zinc-600'
-              }`}
+                }`}
               placeholder="1234567890"
             />
             {errors.phoneNumber && (
@@ -153,11 +149,10 @@ export default function ContactForm() {
               type="text"
               id="subject"
               {...register('subject')}
-              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent transition-colors ${
-                errors.subject
+              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent transition-colors ${errors.subject
                   ? 'ring-red-300 dark:ring-red-700 focus:ring-red-500'
                   : 'ring-zinc-300 dark:ring-zinc-700 focus:ring-indigo-600 dark:focus:ring-indigo-500 hover:ring-zinc-400 dark:hover:ring-zinc-600'
-              }`}
+                }`}
               placeholder="How can we help?"
             />
             {errors.subject && (
@@ -177,11 +172,10 @@ export default function ContactForm() {
               id="message"
               rows={4}
               {...register('message')}
-              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent resize-none transition-colors ${
-                errors.message
+              className={`block w-full rounded-lg border-0 py-2.5 px-3.5 text-zinc-900 dark:text-white shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-transparent resize-none transition-colors ${errors.message
                   ? 'ring-red-300 dark:ring-red-700 focus:ring-red-500'
                   : 'ring-zinc-300 dark:ring-zinc-700 focus:ring-indigo-600 dark:focus:ring-indigo-500 hover:ring-zinc-400 dark:hover:ring-zinc-600'
-              }`}
+                }`}
               placeholder="Your message here..."
             />
             {errors.message && (
