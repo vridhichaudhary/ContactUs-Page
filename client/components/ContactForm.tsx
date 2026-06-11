@@ -27,7 +27,8 @@ export default function ContactForm() {
     setErrorMessage('');
 
     try {
-      await axios.post('http://localhost:5001/api/contact', data);
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001';
+      await axios.post(`${apiUrl}/api/contact`, data);
       setSubmitStatus('success');
       reset();
     } catch (error: any) {
