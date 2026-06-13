@@ -84,7 +84,7 @@ export default function ContactForm() {
                   ? 'ring-red-300 dark:ring-red-700 focus:ring-red-500'
                   : 'ring-zinc-300 dark:ring-zinc-700 focus:ring-indigo-600 dark:focus:ring-indigo-500 hover:ring-zinc-400 dark:hover:ring-zinc-600'
                 }`}
-              placeholder="Jane Doe"
+              placeholder="Your name here"
             />
             {errors.fullName && (
               <p className="mt-2 text-sm text-red-600 dark:text-red-400 animate-in fade-in slide-in-from-top-1">
@@ -107,7 +107,7 @@ export default function ContactForm() {
                   ? 'ring-red-300 dark:ring-red-700 focus:ring-red-500'
                   : 'ring-zinc-300 dark:ring-zinc-700 focus:ring-indigo-600 dark:focus:ring-indigo-500 hover:ring-zinc-400 dark:hover:ring-zinc-600'
                 }`}
-              placeholder="jane@example.com"
+              placeholder="Your email here"
             />
             {errors.email && (
               <p className="mt-2 text-sm text-red-600 dark:text-red-400 animate-in fade-in slide-in-from-top-1">
@@ -130,7 +130,7 @@ export default function ContactForm() {
                   ? 'ring-red-300 dark:ring-red-700 focus:ring-red-500'
                   : 'ring-zinc-300 dark:ring-zinc-700 focus:ring-indigo-600 dark:focus:ring-indigo-500 hover:ring-zinc-400 dark:hover:ring-zinc-600'
                 }`}
-              placeholder="1234567890"
+              placeholder="Your phone number here"
             />
             {errors.phoneNumber && (
               <p className="mt-2 text-sm text-red-600 dark:text-red-400 animate-in fade-in slide-in-from-top-1">

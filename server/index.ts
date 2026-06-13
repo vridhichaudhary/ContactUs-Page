@@ -10,11 +10,6 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(express.json());
 
-// Health check route
-app.get('/', (req, res) => {
-  res.send('Contact API is running!');
-});
-
 app.post('/api/contact', async (req, res) => {
   try {
     const validatedData = contactSchema.parse(req.body);
